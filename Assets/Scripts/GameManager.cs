@@ -13,8 +13,6 @@ public class GameManager : MonoBehaviour
 
 	[SerializeField] private List<LiveCell> liveCells = new List<LiveCell>();
 
-	[SerializeField] private List<LiveCell> testPointToCheck = new List<LiveCell>();
-
 	// Start is called before the first frame update
 	void Start()
 	{			
@@ -123,7 +121,7 @@ public class GameManager : MonoBehaviour
 }
 
 [System.Serializable]
-public struct LiveCell
+public class LiveCell
 {
 	public int x, y;
 
