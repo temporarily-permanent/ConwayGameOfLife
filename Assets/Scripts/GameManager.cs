@@ -110,10 +110,10 @@ public class GameManager : MonoBehaviour
 	{
 		// make list of positions that have at least one live cell neighboring,
 		List<LiveCell> cellsToCheck = GetCellsToCheck(liveCells);
-		foreach (var test in cellsToCheck)
+		/*foreach (var test in cellsToCheck)
 		{
 			print($"test: {test.x}, {test.y}");
-		}
+		}*/
 		
 		// make list of new game state
 		liveCells = GetNewGameState(cellsToCheck);
@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
 }
 
 [System.Serializable]
-public class LiveCell
+public struct LiveCell
 {
 	public int x, y;
 
